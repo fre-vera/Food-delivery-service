@@ -39,6 +39,7 @@ body {
 
 .footer-box {
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,7 +47,7 @@ body {
 }
 
 .footer-nav {
-  flex-grow: 1;
+  
 }
 
 .container {
