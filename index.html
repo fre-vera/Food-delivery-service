@@ -7,12 +7,13 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./script/index.js" defer></script>
   <title>Delivery Food</title>
 </head>
 
 <body>
-  <class="page-wrapper">
+  <div class="page-wrapper">
     <!-- Header -->
     <header class="header">
       <div class="container">
@@ -25,7 +26,7 @@
               <img src="./image/icons/user.png" alt="user" />
               Войти
             </button>
-            <button class="btn btn-outline">
+            <button class="btn btn-outline" id="cart-button">
               <img src="./image/icons/shopping-cart.png" alt="shopping-cart" />
               Корзина
             </button>
@@ -58,8 +59,9 @@
               class="products-header-search"
               placeholder="Поиск блюд и ресторанов"
             />
-            <div class="products-wrapper">
-              <a href="./goods.html" class="products-card">
+          </div>  
+          <div class="products-wrapper" id="rests-container">
+            <a href="./goods.html" class="products-card">
                 <div class="products-card__image">
                   <img src="./image/rests/rests1.jpg" alt="rests1" />
                 </div>
@@ -83,8 +85,8 @@
                     </div>
                   </div>
                 </div>
-              </a>
-              <a href="./goods.html" class="products-card">
+            </a>
+            <a href="./goods.html" class="products-card">
                 <div class="products-card__image">
                   <img src="./image/rests/rests2.jpg" alt="rests2" />
                 </div>
@@ -108,8 +110,8 @@
                     </div>
                   </div>
                 </div>
-              </a>
-              <a href="./goods.html" class="products-card">
+            </a>
+            <a href="./goods.html" class="products-card">
                 <div class="products-card__image">
                   <img src="./image/rests/rests3.jpg" alt="rests3" />
                 </div>
@@ -133,8 +135,8 @@
                     </div>
                   </div>
                 </div>
-              </a>
-              <a href="./goods.html" class="products-card">
+            </a>
+            <a href="./goods.html" class="products-card">
                 <div class="products-card__image">
                   <img src="./image/rests/rests4.jpg" alt="rests4" />
                 </div>
@@ -158,8 +160,8 @@
                     </div>
                   </div>
                 </div>
-              </a>
-              <a href="./goods.html" class="products-card">
+            </a>
+            <a href="./goods.html" class="products-card">
                 <div class="products-card__image">
                   <img src="./image/rests/rests5.jpg" alt="rests5" />
                 </div>
@@ -183,8 +185,8 @@
                     </div>
                   </div>
                 </div>
-              </a>
-              <a href="./goods.html" class="products-card">
+            </a>
+            <a href="./goods.html" class="products-card">
                 <div class="products-card__image">
                   <img src="./image/rests/rests6.jpg" alt="rests6" />
                 </div>
@@ -208,10 +210,9 @@
                     </div>
                   </div>
                 </div>
-              </a>
-            </div>
+            </a>
           </div>
-        </div>
+          </div>
       </section>
     </main>
 
