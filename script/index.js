@@ -132,6 +132,105 @@ const restsFunc = () => {
   };
 };
 
+const goodsFunc = () => {
+  const container = document.querySelector('#goods-container');
+
+  const restArray = [
+    {
+      id: 0,
+      title: 'Ролл угорь стандарт',
+      description: 'Рис, угорь, соус унаги, кунжут, водоросли нори.',
+      price: 250,
+      image: 'goods1.jpg',
+    },
+    {
+      id: 1,
+      title: 'Калифорния лосось стандарт',
+      description: 'Рис, лосось, авокадо, огурец, майонез, икра масаго, водоросли нори.',
+      price: 395,
+      image: 'goods2.jpg',
+    },
+    {
+      id: 2,
+      title: 'Окинава стандарт',
+      description: 'Рис, креветка отварная, сыр сливочный, лосось, огурец свежий...',
+      price: 250,
+      image: 'goods3.jpg',
+    },
+    {
+      id: 3,
+      title: 'Цезарь маки хl',
+      description: 'Рис, куриная грудка копченая, икра масаго, томат, айсберг, соус цезарь...',
+      price: 250,
+      image: 'goods4.jpg',
+    },
+    {
+      id: 4,
+      title: 'Ясай маки стандарт 185 г',
+      description: 'Рис, помидор свежий, перец болгарский, авокадо, огурец, айсберг',
+      price: 250,
+      image: 'goods5.jpg',
+    },
+    {
+      id: 5,
+      title: 'Ролл с креветкой стандарт',
+      description: 'Рис, водоросли нори, креветки отварные, сыр сливочный, огурцы',
+      price: 250,
+      image: 'goods6.jpg',
+    },
+  ];
+
+  const loading = () => {
+    container.innerHTML = '';
+  };
+
+  const renderGoods = (array) => {
+    container.innerHTML = '';
+
+    array.forEach((card) => {
+      container.insertAdjacentHTML(
+        'beforeend', `
+        <div class="products-card">
+        <div class="products-card__image">
+          <img src="./image/goods/${card.image}" alt="${card.image}" />
+        </div>
+        <div class="products-card__description">
+          <div class="products-card__description-row">
+            <h5 class="products-card__description--name">
+              ${card.title}
+            </h5>
+          </div>
+          <div class="products-card__description-row">
+            <p class="products-card__description--text">
+              ${card.description}
+            </p>
+          </div>
+          <div class="products-card__description-row">
+            <div class="products-card__description-controls">
+              <button class="btn btn-primary">
+                Корзина
+                <img src="./image/icons/shopping-cart-white.svg" alt="shopping-cart" />
+              </button>
+              <span class="products-card__description-controls--price">
+                ${card.price}₽
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+        `
+      );
+    });
+  };
+  if (container) {
+    loading();
+
+    setTimeout(() => {
+      renderGoods(restArray);
+    });
+  };
+};
+
 modalFunc();
 restsFunc();
-
+goodsFunc();
